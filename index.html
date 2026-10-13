@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#e2eadb">
+<title>For Tyma, ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+:root{--sage:#dfe8d8;--sage2:#c6d5bd;--green:#435b46;--deep:#2f4535;--lilac:#e8ddf0;--purple:#a88abd;--plum:#60466f;--paper:#faf8f2;--ink:#303a32;--muted:#74796f;--line:#d8e0d2;--shadow:0 22px 60px #31422e1c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.15;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E")}
+button{font:inherit}.wrap{width:min(1050px,calc(100% - 38px));margin:auto}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}.brand{display:flex;align-items:center;gap:9px}.brand-dot{height:8px;width:8px;border-radius:50%;background:var(--purple);box-shadow:0 0 0 4px #eee7f3}.nav-note{letter-spacing:.04em;text-transform:none;color:var(--muted)}
+.hero{position:relative;text-align:center;padding:62px 0 45px;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.kicker{display:none}
+h1{font:400 clamp(3.4rem,8vw,6.6rem)/.98 'Playfair Display',serif;letter-spacing:-.055em;color:var(--green);margin:0 0 20px}h1 em{font-weight:400;color:var(--plum)}
+.hero p{max-width:570px;line-height:1.85;color:#687065;margin:0 auto;font-size:1rem}.hero .tiny{font:italic 1.12rem 'Playfair Display',serif;color:var(--plum);margin-top:20px}
+.doodle{position:absolute;color:#b39ac5;font-size:1.8rem;opacity:.75}.d1{left:12%;top:24%}.d2{right:13%;top:31%;font-size:1.3rem}.d3{right:20%;bottom:12%;font-size:1rem}.d4{left:18%;bottom:18%;font-size:1.1rem}
+.scroll{margin:12px auto 0;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#818779}.scroll span{display:block;margin:9px auto;width:1px;height:26px;background:var(--purple)}
+.gifts{padding:36px 0 74px;background:linear-gradient(180deg,transparent,#edf1e9 8%,#edf1e9 92%,transparent)}
+.section-head{text-align:center;margin:0 auto 32px;max-width:570px}.section-head h2{font:400 clamp(2rem,4.5vw,3.1rem)/1.1 'Playfair Display',serif;color:var(--green);margin:0 0 12px;letter-spacing:-.03em}.section-head p{line-height:1.7;color:var(--muted);margin:0}
+.gift-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.gift{appearance:none;border:1px solid #d5dfd0;background:#faf9f4;border-radius:5px;padding:18px 18px 22px;text-align:left;cursor:pointer;position:relative;overflow:hidden;min-width:0;transition:transform .25s,box-shadow .25s,border-color .25s;color:inherit}
+.gift:hover{transform:translateY(-6px) rotate(-.25deg);box-shadow:var(--shadow);border-color:#b5c7ad}.gift:focus-visible,.btn:focus-visible,.close:focus-visible{outline:3px solid var(--purple);outline-offset:4px}
+.gift-top{display:flex;justify-content:space-between;align-items:center;font-size:.65rem;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}.gift-top span:last-child{color:var(--plum);font-size:1rem}
+.box-stage{height:190px;display:grid;place-items:center;position:relative;perspective:650px}
+.gift-shadow{position:absolute;bottom:24px;width:125px;height:15px;border-radius:50%;background:#a8b7a044;filter:blur(5px)}
+.present{position:relative;width:118px;height:102px;transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.box-body{position:absolute;left:4px;right:4px;bottom:0;height:76px;border-radius:3px;background:#789076;box-shadow:inset -10px -5px #61795f}
+.box-body:before{content:"";position:absolute;left:47px;top:0;width:17px;height:100%;background:#eadff1}
+.box-lid{position:absolute;left:-3px;top:17px;width:124px;height:25px;border-radius:3px;background:#8ca187;z-index:3;box-shadow:0 4px 0 #61795f;transform-origin:10% 90%;transition:transform .8s cubic-bezier(.2,.8,.2,1),top .8s}
+.box-lid:before{content:"";position:absolute;left:50px;top:0;width:17px;height:100%;background:#eadff1}
+.ribbon-bow{position:absolute;z-index:4;left:44px;top:0;width:20px;height:18px;border:6px solid var(--plum);border-radius:70% 15% 70% 15%;transform:rotate(15deg);transition:opacity .2s,transform .5s}
+.ribbon-bow:after{content:"";position:absolute;width:20px;height:18px;border:6px solid var(--plum);border-radius:15% 70% 15% 70%;left:7px;top:-5px;transform:rotate(65deg)}
+.gift:nth-child(2) .box-body{background:#b59ac8;box-shadow:inset -10px -5px #9677ad}.gift:nth-child(2) .box-lid{background:#c5add5;box-shadow:0 4px 0 #9677ad}.gift:nth-child(2) .box-body:before,.gift:nth-child(2) .box-lid:before{background:#f5e8cc}.gift:nth-child(2) .ribbon-bow{border-color:#71866f}.gift:nth-child(2) .ribbon-bow:after{border-color:#71866f}
+.gift:nth-child(3) .box-body{background:#d7c6e4;box-shadow:inset -10px -5px #b19ac2}.gift:nth-child(3) .box-lid{background:#e5d9ed;box-shadow:0 4px 0 #b19ac2}.gift:nth-child(3) .box-body:before,.gift:nth-child(3) .box-lid:before{background:#72896e}.gift:nth-child(3) .ribbon-bow{border-color:#f5e8cc}.gift:nth-child(3) .ribbon-bow:after{border-color:#f5e8cc}
+.gift:hover .present{transform:translateY(-4px) rotate(2deg)}.gift h3{font:400 1.4rem 'Playfair Display',serif;color:var(--green);margin:0 0 8px}.gift p{font-size:.83rem;line-height:1.65;color:var(--muted);margin:0;max-width:270px}.open-hint{display:flex;align-items:center;justify-content:space-between;margin-top:19px;padding-top:13px;border-top:1px solid #e4e8df;color:var(--plum);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.gift.opening .box-lid{transform:translate3d(35px,-95px,30px) rotate(28deg)}.gift.opening .ribbon-bow{opacity:0;transform:translateY(-35px) rotate(40deg)}.gift.opening .present{transform:translateY(-10px) scale(.96)}
+.gift.opening .box-body{animation:boxBounce .55s .35s ease both}
+@keyframes boxBounce{0%,100%{transform:translateY(0)}40%{transform:translateY(8px)}70%{transform:translateY(-2px)}}
+.note-strip{max-width:690px;margin:35px auto 0;text-align:center;color:#7b8276;font-size:.78rem;line-height:1.7}.note-strip b{font-weight:500;color:var(--plum)}
+.wheel-section{padding:44px 0 80px}.wheel-layout{display:grid;grid-template-columns:1fr .9fr;gap:45px;align-items:center;max-width:900px;margin:auto}.wheel-copy h2{font:400 clamp(2.1rem,4vw,3.1rem)/1.08 'Playfair Display',serif;color:var(--green);margin:0 0 15px}.wheel-copy p{line-height:1.8;color:var(--muted)}.wheel-copy .kicker:after{display:none}
+.wheel-wrap{display:grid;justify-items:center;gap:17px}.wheel-shell{width:min(310px,76vw);aspect-ratio:1;border-radius:50%;padding:9px;background:#f9f6ed;border:1px solid #d8dfd2;box-shadow:0 16px 36px #3e4e3519;position:relative}.wheel-pointer{position:absolute;z-index:3;top:-2px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-top:27px solid var(--plum);filter:drop-shadow(0 2px 1px white)}#wheel{width:100%;height:100%;display:block;border-radius:50%;transition:transform 4.2s cubic-bezier(.12,.72,.12,1)}.wheel-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--paper);border:1px solid #d7c8e2;display:grid;place-items:center;font-size:1.4rem;box-shadow:0 2px 8px #3332}
+.btn{border:0;border-radius:100px;background:var(--green);color:white;padding:13px 23px;font-size:.85rem;font-weight:600;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px);background:#536b55}.btn:disabled{opacity:.6;cursor:wait}.wheel-result{width:min(390px,100%);min-height:28px;text-align:center;color:var(--plum);font:italic 1.15rem 'Playfair Display',serif}.dua-card{position:relative;display:none;width:100%;padding:28px 24px 25px;background:#f0e8f5;border:1px solid #d8c8e4;color:#60466f;box-shadow:0 12px 28px #60466f14;transform:translateY(12px) rotate(-1deg);opacity:0}.dua-card.show{display:block;animation:duaAppear .7s cubic-bezier(.2,.8,.2,1) forwards}.dua-card:before{content:'';position:absolute;inset:7px;border:1px solid #ddcfe7;pointer-events:none}.dua-flower{font-size:1.8rem;display:block;margin:0 auto 12px;color:#71866f;animation:flowerBloom .7s ease both}.dua-text{position:relative;line-height:1.75;font:italic 1.17rem/1.75 'Playfair Display',serif}.dua-small{position:relative;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;margin-top:14px;color:#7c6889}@keyframes duaAppear{to{opacity:1;transform:translateY(0) rotate(0)}}@keyframes flowerBloom{0%{opacity:0;transform:scale(.25) rotate(-45deg)}70%{transform:scale(1.18) rotate(8deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
+.last-note{padding:0 0 80px}.letter{max-width:700px;margin:auto;background:#f1ebf5;border:1px solid #e0d4e9;padding:clamp(27px,6vw,53px);position:relative}.letter:before{content:"";position:absolute;inset:9px;border:1px solid #d9c9e5;pointer-events:none}.letter .kicker{position:relative}.letter h2{position:relative;font:400 clamp(2rem,4vw,2.9rem) 'Playfair Display',serif;color:var(--plum);margin:0 0 18px}.letter p{position:relative;line-height:1.9;color:#625e66;margin-bottom:14px}.letter .signoff{font:italic 1.25rem 'Playfair Display',serif;color:var(--plum);margin-top:22px}
+footer{text-align:center;padding:24px 20px 34px;color:#818779;font-size:.72rem;letter-spacing:.05em}footer span{color:#9c7cb1}
+.modal{position:fixed;inset:0;z-index:20;background:#25332999;backdrop-filter:blur(7px);display:none;align-items:center;justify-content:center;padding:16px}.modal.show{display:flex}.modal-panel{position:relative;width:min(680px,100%);max-height:90vh;overflow:auto;background:var(--paper);border:1px solid #e3e7dd;box-shadow:0 25px 90px #17201666;padding:clamp(24px,5vw,43px);animation:rise .45s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(35px) scale(.96)}to{opacity:1;transform:none}}
+.close{position:absolute;right:13px;top:13px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--green);font-size:1.25rem;cursor:pointer}.modal-kicker{display:none}.modal h2{font:400 clamp(2rem,5vw,3rem)/1.05 'Playfair Display',serif;color:var(--plum);margin:0 38px 15px 0}.modal-message{color:#646a60;line-height:1.8;white-space:pre-line}.reveal-stage{margin:22px auto 0;position:relative;min-height:90px;display:grid;place-items:center}.reveal-card{width:100%;display:none;opacity:0;transform:translateY(28px) scale(.97);animation:cardRise .75s .25s cubic-bezier(.2,.8,.2,1) forwards}.reveal-card.ready{display:block}
+@keyframes cardRise{to{opacity:1;transform:translateY(0) scale(1)}}
+.reveal-card img,.reveal-card video{display:block;max-width:100%;max-height:58vh;width:auto;height:auto;margin:auto;object-fit:contain;border-radius:4px;box-shadow:0 12px 32px #2635261a}.reveal-card video{width:100%}.reveal-card iframe{width:100%;height:min(58vh,550px);border:1px solid var(--line);background:white}.reveal-card a{color:var(--plum);text-underline-offset:4px}.download-image{display:table;width:max-content;max-width:100%;margin:12px auto 20px;padding:9px 16px;border:1px solid #c9d7c2;border-radius:999px;background:#f2f5ed;color:#526b52!important;font-size:.82rem;font-weight:600;text-decoration:none!important;transition:background .2s,transform .2s}.download-image:hover{background:#e5eddf;transform:translateY(-1px)}.media-placeholder{border:1px dashed #bdcdb6;background:#f1f3eb;padding:25px;text-align:center;color:#687564;line-height:1.7}.modal-foot{border-top:1px solid var(--line);margin-top:24px;padding-top:16px;font:italic 1rem 'Playfair Display',serif;color:var(--sage-deep)}
+.spark{position:fixed;z-index:50;top:-20px;pointer-events:none;animation:fall 2.8s linear forwards;font-size:18px}.birthday-sparkles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}.float-heart{position:absolute;bottom:-35px;opacity:0;animation:floatUp linear forwards;color:#a88abd;text-shadow:0 2px 8px #a88abd33;font-size:18px}@keyframes floatUp{0%{transform:translateY(0) rotate(0deg);opacity:0}12%{opacity:.55}85%{opacity:.45}100%{transform:translateY(-115vh) rotate(28deg);opacity:0}}@keyframes fall{to{transform:translateY(110vh) rotate(500deg);opacity:0}}
+@media(max-width:720px){.nav{padding:17px 0}.nav-note{max-width:130px;text-align:right;line-height:1.5}.hero{padding:52px 0 34px;min-height:345px}.d1{left:4%;top:17%}.d2{right:5%;top:22%}.d3{right:8%;bottom:10%}.d4{left:8%;bottom:12%}.gift-grid{grid-template-columns:1fr;max-width:430px;margin:auto;gap:15px}.gift{padding:16px 17px 18px}.box-stage{height:150px}.gift p{max-width:none}.wheel-layout{grid-template-columns:1fr;gap:25px;text-align:center}.wheel-copy .kicker{justify-content:center}.wheel-section{padding:30px 0 62px}.last-note{padding-bottom:60px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Birthday letter doodles */
+.letter{overflow:hidden;border-radius:4px;background:linear-gradient(145deg,#f4edf7,#f7f4eb 78%);text-align:center}
+.letter:before{border-radius:2px}
+.letter-doodles{position:relative;height:66px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;gap:18px}
+.letter-doodles .teddy{font-size:2.2rem;filter:drop-shadow(0 3px 2px #60466f12);animation:floaty 3s ease-in-out infinite}
+.letter-doodles .flower{font-size:2rem;animation:flowerSway 3.2s ease-in-out infinite}
+.letter-doodles .sparkle{font-size:1.4rem;color:#a88abd}
+.letter h2{margin:0 0 18px}
+.letter p{max-width:530px;margin:0 auto 13px}
+.letter .signoff{margin-top:20px}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-5px) rotate(4deg)}}
+@keyframes flowerSway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(6deg)}}
+.wheel-section{padding:24px 0 85px}
+.wheel-layout{display:block;max-width:760px}
+.wheel-copy{display:none}
+.wheel-wrap{gap:22px}
+.wheel-shell{width:min(490px,88vw);padding:12px;box-shadow:0 20px 55px #3e4e3520}
+.wheel-center{width:68px;height:68px;font-size:1.8rem}
+#spinBtn{font-size:1rem;padding:15px 30px;min-width:220px}
+.wheel-result{display:none}
+@media(max-width:720px){.wheel-section{padding:10px 0 60px}.wheel-shell{width:min(420px,88vw)}.wheel-center{width:56px;height:56px}}
+
+
+.wish-panel{text-align:center;max-width:500px;border-radius:5px;background:linear-gradient(145deg,#f8f4fa,#f7f5ed);border-color:#e3d8eb}
+.wish-flowers{font-size:1.55rem;margin:4px 0 18px;animation:floaty 2.5s ease-in-out infinite}
+.wish-panel h2{font-size:clamp(1.8rem,5vw,2.5rem);margin:0 25px 18px}
+.wish-text{font:400 clamp(1.2rem,3.8vw,1.5rem)/1.65 'Playfair Display',serif;color:#4d654f;margin:0 auto;max-width:390px}
+.wish-bottom{font:italic 1rem 'Playfair Display',serif;color:#8b70a0;margin-top:22px}
+
+/* A richer sage + lilac palette: soft color washes keep the page from feeling stark white. */
+body{background:linear-gradient(155deg,#f3f2e9 0%,#eef2e8 31%,#f1eaf5 66%,#f6efe4 100%);background-attachment:fixed}
+.hero{background:radial-gradient(ellipse at 50% 38%,#e5ebdfb8 0%,#e5ebdf00 72%);border-radius:0 0 48% 48%}
+.gifts{background:linear-gradient(180deg,#e7eee1 0%,#e4ebdf 14%,#e9e3f0 50%,#e4ebdf 88%,#e7eee100 100%)}
+.gift{background:linear-gradient(145deg,#fbfaf5 0%,#f0f3eb 100%);box-shadow:0 8px 24px #53664b0d}
+.gift:nth-child(2){background:linear-gradient(145deg,#fbf8fc 0%,#eee4f4 100%)}
+.gift:nth-child(3){background:linear-gradient(145deg,#fcf8ef 0%,#f1e8d9 100%)}
+.wheel-section{background:radial-gradient(ellipse at center,#e9e0f1 0%,#e8eede 58%,#e8eede00 80%);border-radius:38px}
+.wheel-shell{background:#e9eee2;border:1px solid #c7d5bf;box-shadow:0 20px 60px #7b8e712b,0 0 0 8px #e8e1f0a8}
+.letter{background:linear-gradient(135deg,#eee5f4 0%,#e4ecde 100%);box-shadow:0 18px 42px #5b4a6c14}
+.modal-panel{background:linear-gradient(145deg,#fcfaf4 0%,#f0f3e9 50%,#f1e8f5 100%)}
+.wish-panel{background:linear-gradient(145deg,#f0e8f5 0%,#e8eee0 100%)}
+@media(max-width:720px){.hero{border-radius:0 0 30% 30%}}
+
+
+/* Calm decorative details: keep the little icons still, and brighten the page. */
+.letter-doodles .teddy,
+.letter-doodles .flower,
+.wish-flowers { animation: none !important; transform: none !important; }
+body { background: linear-gradient(145deg, #f8f8ef 0%, #f2f7ed 30%, #f7effa 64%, #fff6e9 100%) !important; }
+body:before { opacity: .07; }
+.hero { background: radial-gradient(ellipse at 50% 38%, #eef5e8 0%, #f8f8ef00 74%); }
+.gifts { background: linear-gradient(180deg, #f3f7ee 0%, #edf4e7 18%, #f3ebf8 52%, #edf4e7 86%, #f8f8ef00 100%); }
+.wheel-section { background: radial-gradient(ellipse at center, #f4eafb 0%, #f0f6e9 60%, #f8f8ef00 82%); }
+.letter { background: linear-gradient(135deg, #f6edfb 0%, #edf5e7 100%); }
+.modal-panel { background: linear-gradient(145deg, #fffdf7 0%, #f5f8ee 50%, #f7effb 100%); }
+.wish-panel { background: linear-gradient(145deg, #f7effb 0%, #f0f6e9 100%); }
+
+
+</style>
+</head>
+<body>
+<header class="wrap nav"><div class="brand"><span class="brand-dot"></span> a little something for Tyma</div><div class="nav-note">handmade, just like this little corner</div></header>
+<main>
+<section class="wrap hero">
+  <span class="doodle d1">✿</span><span class="doodle d2">✧</span><span class="doodle d3">♡</span><span class="doodle d4">✦</span>
+  
+  <h1>Happy birthday,<br><em>Tyma.</em></h1>
+  <p>I made you a tiny corner of the internet. It has a few surprises, a little bit of chaos</p>
+  <div class="tiny">P.S. I hope you like surprises. ♡</div>
+  <div class="scroll">your surprises are down here</div>
+</section>
+
+<section class="gifts" id="gifts">
+ <div class="wrap">
+  <div class="section-head"><h2>Three little surprises</h2><p>Tap a present to loosen the ribbon and see what's hiding inside. No peeking at all three at once… okay, you can.</p></div>
+  <div class="gift-grid">
+   <button class="gift" data-gift="0" aria-label="Unwrap the drawing gift">
+    <div class="gift-top"><span>♡</span><span>✦</span></div>
+    <div class="box-stage"><div class="gift-shadow"></div><div class="present"><div class="box-body"></div><div class="box-lid"></div><div class="ribbon-bow"></div></div></div>
+    <h3>A drawing, just for you</h3><p>I made something for you. It might be a tiny bit cheesy. Let me live.</p><div class="open-hint"><span>unwrap your drawing</span><span>↗</span></div>
+   </button>
+   <button class="gift" data-gift="1" aria-label="Unwrap the video and handmade gift card">
+    <div class="gift-top"><span>♡</span><span>✿</span></div>
+    <div class="box-stage"><div class="gift-shadow"></div><div class="present"><div class="box-body"></div><div class="box-lid"></div><div class="ribbon-bow"></div></div></div>
+    <h3>Press play, maybe?</h3><p>A little something to watch, plus a card I put together just for you.</p><div class="open-hint"><span>open the surprise</span><span>↗</span></div>
+   </button>
+   <button class="gift" data-gift="2" aria-label="Unwrap the Valorant points gift">
+    <div class="gift-top"><span>♡</span><span>☄</span></div>
+    <div class="box-stage"><div class="gift-shadow"></div><div class="present"><div class="box-body"></div><div class="box-lid"></div><div class="ribbon-bow"></div></div></div>
+    <h3>For your next match</h3><p>For the agent select, the skins, and the “one more game” that becomes five.</p><div class="open-hint"><span>mystery unlocked?</span><span>↗</span></div>
+   </button>
+  </div>
+  <div class="note-strip">You deserve nice things, Tyma. That is all. Carry on. ♡</div>
+ </div>
+</section>
+
+<section class="wheel-section wrap" aria-label="Birthday wish wheel">
+ <div class="wheel-layout">
+  <div class="wheel-wrap">
+   <div class="wheel-shell"><div class="wheel-pointer"></div><canvas id="wheel" width="600" height="600" aria-label="Spin for a birthday wish"></canvas><div class="wheel-center">♡</div></div>
+   <button class="btn" id="spinBtn">Spin for a random message ♡</button>
+   <div class="wheel-result" id="wheelResult" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+
+<section class="last-note wrap">
+ <div class="letter">
+   <div class="letter-doodles" aria-hidden="true"><span class="teddy">🧸💗</span><span class="flower">🌷</span><span class="sparkle">✧</span></div>
+   <h2>Happy birthday, Tyma ♡</h2>
+   <p>May Allah bless you always, grant your duas, and give you lots of reasons to be happy. Ameen. 🤍</p>
+   <p>May He make things easy for you, protect you, and bring good things into your life. I hope this year is a good one for you, insha’Allah.</p>
+   <p>Have the loveliest birthday, and don’t forget to treat yourself today. ♡</p>
+   <p class="signoff">Happy birthday, Tyma 🌷</p>
+ </div>
+</section>
+</main>
+<footer>made for Tyma with <span>♥</span>, sage green, and suspicious amounts of effort</footer>
+
+<div class="modal" id="giftModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="modal-panel"><button class="close" id="closeModal" aria-label="Close gift">×</button><h2 id="modalTitle">A little surprise</h2><div class="modal-message" id="modalMessage"></div><div class="reveal-stage" id="revealStage"></div><div class="modal-foot">hope this made you smile. ♡</div></div>
+</div>
+<div class="modal wish-modal" id="wishPopup" role="dialog" aria-modal="true" aria-labelledby="wishTitle">
+ <div class="modal-panel wish-panel">
+  <button class="close" id="wishClose" aria-label="Close wish">×</button>
+  <div class="wish-flowers" aria-hidden="true">🌷　✿　🧸💗</div>
+  <h2 id="wishTitle">A little dua for you ♡</h2>
+  <p class="wish-text" id="wishText"></p>
+  <div class="wish-bottom">Ameen ♡</div>
+ </div>
+</div>
+<script>
+/* =================== ADD YOUR FILES HERE ===================
+   Put your files in folders beside index.html, for example:
+   assets/tyma-drawing.jpeg
+   assets/birthday-video.mp4
+   assets/handmade-card-front.jpeg
+   assets/handmade-card-open.jpeg
+   assets/valorant-1000vp.webp  (use your actual card image)
+   If you have a real digital code, add it only if safe to share:
+   giftCode: "YOUR-CODE-HERE"
+   Never upload an unused redeem code to a public GitHub repository.
+============================================================ */
+const gifts = [
+ {kicker:"",title:"A drawing, just for you",message:"Some hours of suffering may or may not have happened while drawing this. 😭✍️ I drew this for you and I hope it makes you smile. ♡",items:[
+  {type:"image",file:"assets/tyma-drawing.jpeg",alt:"A drawing made for Tyma",caption:"A hand drawn picture of the famous baldy streamer by Kyro ♡ (ahem cough cough)"}
+ ]},
+ {kicker:"",title:"Your little birthday flower",message:"A little video, and the handmade flower card with all its tiny birthday wishes. I definitely made it with ♡",items:[
+  {type:"video",file:"assets/birthday-video.mp4",caption:"a little message for you"},
+  {type:"image",file:"assets/handmade-card-front.jpeg",alt:"Front of the handmade gift card",caption:"the little flower card, closed"},
+  {type:"image",file:"assets/handmade-card-open.jpeg",alt:"Back of the handmade gift card",caption:"and then it opens… ♡"}
+ ]},
+ {kicker:"",title:"1000 VP for you!",message:"A little something for your next Valorant shop visit. Hope you find a skin you like. 🎮",items:[
+  {type:"image",file:"assets/valorant-1000vp.webp",alt:"Valorant 1000 VP gift card",caption:"a little boost for your next Valorant shop visit"}
+  // Optional: {type:"link",file:"YOUR_OFFICIAL_REDEMPTION_LINK",linkText:"Redeem your gift"}
+ ]}
+];
+// Little birthday duas and wishes for Tyma. The wheel chooses one at random.
+const wheelOptions=["Barakah ♡","Peace 🤍","Your duas 🌙","Protection 🌸","Kind people 🌿","Little joys ✨","Ease 🕊️"];
+const wheelBlessings=[
+ "May Allah put barakah in your year. Ameen. ♡",
+ "May Allah give you peace and keep your heart at ease. Ameen. 🤍",
+ "May Allah accept your duas and give you what's best for you. Ameen. 🌙",
+ "May Allah protect you and keep you safe. Ameen. 🌸",
+ "May Allah surround you with kind and genuine people. Ameen. 🌿",
+ "May this year bring you lots of little things to smile about. ♡",
+ "May Allah make things easier for you and guide you to what's good. Ameen. 🕊️"
+];
+const modal=document.getElementById("giftModal"),stage=document.getElementById("revealStage");
+let lastFocus=null;
+document.querySelectorAll("[data-gift]").forEach(btn=>btn.addEventListener("click",()=>openGift(Number(btn.dataset.gift),btn)));
+function openGift(index,trigger){
+ const gift=gifts[index];if(!gift)return;lastFocus=trigger;
+ document.querySelectorAll(".gift").forEach((b,i)=>{b.classList.toggle("opening",i===index);});
+ document.getElementById("modalTitle").textContent=gift.title;
+ document.getElementById("modalMessage").textContent=gift.message;
+ stage.replaceChildren();
+ gift.items.forEach((item,i)=>{
+  const wrap=document.createElement("div");wrap.className="reveal-card";wrap.style.animationDelay=(.2+i*.16)+"s";
+  if(item.type==="image"){
+   const img=document.createElement("img");img.src=item.file;img.alt=item.alt||"A gift for Tyma";
+   img.onerror=()=>{wrap.innerHTML='<div class="media-placeholder">Your image will appear here when you add<br><b>'+escapeHtml(item.file)+'</b><br>to the website files.</div>';};
+   wrap.appendChild(img);
+   if(item.file!=="assets/valorant-1000vp.webp"){
+    const download=document.createElement("a");download.className="download-image";download.href=item.file;download.download=item.file.split("/").pop();download.textContent="♡ Download this picture";download.setAttribute("aria-label","Download "+(item.alt||"this picture"));wrap.appendChild(download);
+   }
+  }else if(item.type==="video"){
+   const video=document.createElement("video");video.src=item.file;video.controls=true;video.playsInline=true;video.preload="metadata";
+   video.onerror=()=>{wrap.innerHTML='<div class="media-placeholder">Your video will appear here when you add<br><b>'+escapeHtml(item.file)+'</b><br>to the website files.</div>';};
+   wrap.appendChild(video);
+  }else if(item.type==="pdf"){
+   const frame=document.createElement("iframe");frame.src=item.file;frame.title="Birthday gift PDF";wrap.appendChild(frame);
+   const a=document.createElement("a");a.href=item.file;a.target="_blank";a.rel="noopener";a.textContent="Open the PDF separately ↗";wrap.appendChild(a);
+  }else if(item.type==="link"){
+   const a=document.createElement("a");a.href=item.file;a.target="_blank";a.rel="noopener";a.textContent=item.linkText||"Open your gift ↗";wrap.appendChild(a);
+  }
+  if(item.caption){const cap=document.createElement("p");cap.textContent=item.caption;cap.style.cssText="text-align:center;font:italic 1rem 'Playfair Display',serif;color:#60466f;margin:12px 0 22px";wrap.appendChild(cap);}
+  stage.appendChild(wrap);
+ });
+ modal.classList.add("show");document.body.style.overflow="hidden";document.getElementById("closeModal").focus();sprinkle(15);
+ // Stagger the media reveal. Every card slides out like a gift being lifted from the box.
+ [...stage.children].forEach((el,i)=>setTimeout(()=>el.classList.add("ready"),80+i*190));
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function closeGift(){modal.classList.remove("show");document.body.style.overflow="";document.querySelectorAll(".gift").forEach(b=>b.classList.remove("opening"));if(lastFocus)lastFocus.focus();}
+document.getElementById("closeModal").addEventListener("click",closeGift);
+modal.addEventListener("click",e=>{if(e.target===modal)closeGift();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&modal.classList.contains("show"))closeGift();});
+function sprinkle(n){const chars=["✦","✿","♡","✧"];for(let i=0;i<n;i++){const el=document.createElement("span");el.className="spark";el.textContent=chars[Math.floor(Math.random()*chars.length)];el.style.left=Math.random()*100+"vw";el.style.color=Math.random()>.5?"#71866f":"#a88abd";el.style.animationDelay=Math.random()*.5+"s";document.body.appendChild(el);setTimeout(()=>el.remove(),3300);}}
+const canvas=document.getElementById("wheel"),ctx=canvas.getContext("2d"),colors=["#dce7d6","#e8def0","#f3e9d7","#c6d4bf","#d6c5e2","#f5eee2"];
+let rotation=0,spinning=false;
+function drawWheel(){const cx=300,cy=300,r=286,slice=Math.PI*2/wheelOptions.length;ctx.clearRect(0,0,600,600);wheelOptions.forEach((label,i)=>{const start=-Math.PI/2+i*slice;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,start,start+slice);ctx.closePath();ctx.fillStyle=colors[i%colors.length];ctx.fill();ctx.strokeStyle="#faf8f2";ctx.lineWidth=5;ctx.stroke();const emoji=label.split(" ").slice(-1)[0];const mid=start+slice/2;const er=192;ctx.save();ctx.translate(cx+Math.cos(mid)*er,cy+Math.sin(mid)*er);ctx.font="36px serif";ctx.textAlign="center";ctx.textBaseline="middle";ctx.shadowColor="#ffffffaa";ctx.shadowBlur=4;ctx.fillText(emoji,0,0);ctx.restore();});ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.strokeStyle="#b8c7b1";ctx.lineWidth=3;ctx.stroke();}
+drawWheel();if(document.fonts)document.fonts.ready.then(drawWheel);
+// A few gentle birthday sparkles drift through the page without getting in the way.
+function floatingHearts(n=12){const layer=document.querySelector('.birthday-sparkles');if(!layer)return;for(let i=0;i<n;i++){const el=document.createElement('span');el.className='float-heart';el.textContent=['♡','✦','✿','♥'][Math.floor(Math.random()*4)];el.style.left=(Math.random()*100)+'%';el.style.animationDuration=(8+Math.random()*8)+'s';el.style.animationDelay=(Math.random()*7)+'s';el.style.fontSize=(12+Math.random()*13)+'px';layer.appendChild(el);setTimeout(()=>el.remove(),17000);}}
+floatingHearts(14);
+const spinButton=document.getElementById("spinBtn");
+spinButton.addEventListener("click",()=>{
+ if(spinning)return;
+ spinning=true;spinButton.disabled=true;spinButton.textContent="Spinning… ♡";
+ const chosen=Math.floor(Math.random()*wheelBlessings.length);
+ const slice=360/wheelBlessings.length;
+ const target=(360-(chosen*slice+slice/2))%360;
+ const current=((rotation%360)+360)%360;
+ const startRotation=rotation;
+ const extraTurns=22 + Math.floor(Math.random()*5); // 22–26 full turns, visibly fast
+ rotation = startRotation + extraTurns*360 + ((target-current+360)%360);
+ const fastEnd=startRotation + extraTurns*360;
+ canvas.style.transition="none";
+ // Keep the wheel moving at full speed for most of the animation, then brake smoothly into the selected dua.
+ const spinAnimation=canvas.animate([
+   { transform:`rotate(${startRotation}deg)`, offset:0, easing:"linear" },
+   { transform:`rotate(${fastEnd}deg)`, offset:0.78, easing:"cubic-bezier(.12,.72,.12,1)" },
+   { transform:`rotate(${rotation}deg)`, offset:1 }
+ ],{duration:4300,fill:"forwards"});
+ spinAnimation.onfinish=()=>{
+   canvas.style.transform=`rotate(${rotation}deg)`;
+   spinAnimation.cancel();
+   spinButton.disabled=false;spinButton.textContent="Spin for a random message ♡";spinning=false;
+   showWish(wheelBlessings[chosen]);sprinkle(28);
+ };
+});
+function showWish(message){const popup=document.getElementById("wishPopup");document.getElementById("wishText").textContent=message;popup.classList.add("show");document.body.style.overflow="hidden";sprinkle(20);}
+function closeWish(){document.getElementById("wishPopup").classList.remove("show");document.body.style.overflow="";}
+document.getElementById("wishClose").addEventListener("click",closeWish);
+document.getElementById("wishPopup").addEventListener("click",e=>{if(e.target.id==="wishPopup")closeWish();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeWish();if(modal.classList.contains("show"))closeGift();}});
+</script>
+<div class="birthday-sparkles" aria-hidden="true"></div>
+</body>
+</html>
